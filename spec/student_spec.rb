@@ -53,6 +53,7 @@ describe "Student" do
       sarah = Student.new("Sarah", "9th")
       sarah.save
       expect(DB[:conn].execute("SELECT * FROM students")).to eq([[1, "Sarah", "9th"]])
+      # binding.pry
       expect(sarah.id).to eq(1)
     end
 
